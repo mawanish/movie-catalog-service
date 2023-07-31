@@ -9,5 +9,6 @@ import lombok.*;
 @Getter
 public class Movie {
     public String movieId;
-    public String name;
+    public String title;
+    public String overview;
 }

@@ -28,8 +28,8 @@ public class MovieCatalogResource {
         return userRating.getUserRating().stream().map(rating -> {
             Movie movie = restTemplate.getForObject("http://movie-info-service/movie/" + rating.getMovieId(), Movie.class);
             return CatalogItem.builder()
-                    .name(movie.getName())
-                    .desc("description")
+                    .name(movie.getTitle())
+                    .desc(movie.getOverview())
                     .rating(rating.getRating())
                     .build();
         }).collect(Collectors.toList());
