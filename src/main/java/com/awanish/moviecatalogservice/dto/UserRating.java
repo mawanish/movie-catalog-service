@@ -10,5 +10,6 @@ import java.util.List;
 @Setter
 @Getter
 public class UserRating {
+    private String userId;
     private List<Rating> userRating;
 }
